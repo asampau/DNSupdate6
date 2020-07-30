@@ -1,0 +1,4 @@
+#
+# Actualizacion de DNS IPv6 dinaminco 20200721
+#
+46 * * * * /root/Scripts/Add-DNS-AAAA.sh

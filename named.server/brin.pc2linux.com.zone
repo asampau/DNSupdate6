@@ -1,0 +1,61 @@
+$TTL 86400
+@   IN  SOA     nsbrin.pc2linux.com. asampau.gmail.com. (
+        2020073001  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        86400       ;Minimum TTL
+)
+; Specify our two nameservers
+		IN	NS		ns1.brin.pc2linux.com.
+		IN	NS		ns2.brin.pc2linux.com.
+; Resolve nameserver hostnames to IP, replace with your two droplet IP addresses.
+
+; Define hostname -> IP pairs which you wish to resolve
+@		IN	A		108.161.137.89
+www		IN	A		108.161.137.89
+ns1		IN	AAAA		2606:4300:0:4::100e
+ns2		IN	AAAA		2606:4300:0:4::100e
+ipwebcam	IN	AAAA		2800:810:487:81a3:be44:86ff:fed4:ce28
+ipwebcam	IN	AAAA		2800:810:487:1e9:be44:86ff:fed4:ce28
+host180		IN	AAAA		2800:810:487:1e9:a00:27ff:fe7a:cac2
+host180		IN	AAAA		2800:810:487:81a3:a00:27ff:fe7a:cac2
+asampau-ThinkPad-L430	IN	AAAA	2800:810:557:8ec5:ddb9:b4fa:4025:aa5d
+Host110	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cab4
+Host120	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cab6
+Host130	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cab8
+Host140	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:caba
+Host150	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cabc
+Host160	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cabe
+Host170	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cac0
+Host180	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cac2
+Host190	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cac4
+Host200	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cac6
+asampau-Presario-21	IN	AAAA	2800:810:487:81a3:c14a:d5a3:d94a:331a
+host887	IN	AAAA	2800:810:557:8ec5:8833:52ee:f2be:acc0
+hostname	IN	AAAA	2800:810:557:8ec5:8833:52ee:f2be:acc0
+asampau-Presario-21	IN	AAAA	2800:810:487:81a3:c14a:d5a3:d94a:331a
+z3play	IN	AAAA	2800:810:557:8ec5:c93a:5a76:c440:8084
+dell-manjaro	IN	AAAA	2800:810:44b:474::1006
+s4mini	IN	AAAA	2800:810:487:81a3:a4d6:3cb1:ebfc:6895
+s4mini	IN	AAAA	2800:810:487:81a3:2580:f7:14f1:36d6
+asampau-Presario-21	IN	AAAA	2800:810:487:81a3:c14a:d5a3:d94a:331a
+asampau-Presario-21	IN	AAAA	2800:810:487:81a3:c14a:d5a3:d94a:331a
+AddHost2Domain	IN	AAAA	2800:810:487:81a3:a00:27ff:fe7a:cac2
+ksjcnkjcn	IN	AAAA	2606:4300:0:4::100e
+ksjcnkjcn	IN	AAAA	2606:4300:0:4::100e
+teste	IN	AAAA	2606:4300:0:4::100e
+teste4	IN	AAAA	2606:4300:0:4::100e
+sebafe	IN	AAAA	2800:810:439:27f:5861:1d3b:6ff9:f41b
+sebaopi	IN	AAAA	2800:810:439:27f:5861:1d3b:6ff9:f41b
+teste	IN	AAAA	2606:4300:0:4::100e
+lgmami	IN	AAAA	2800:810:557:8ec5:c0ef:6ff5:8325:69c2
+la	IN	AAAA	2800:810:557:8ec5:b182:54e:8551:1602
+lanayaes	IN	AAAA	2800:810:557:8ec5:b182:54e:8551:1602
+lanaya	IN	AAAA	2800:810:557:8ec5:b182:54e:8551:1602
+lanayaspain	IN	AAAA	2800:810:557:8ec5:b182:54e:8551:1602
+laya	IN	AAAA	2800:810:557:8ec5:b182:54e:8551:1602
+leandroanaya	IN	AAAA	2800:810:557:8ec5:b182:54e:8551:1602
+l	IN	AAAA	2800:810:557:8ec5:b182:54e:8551:1602
+lsdcsc	IN	AAAA	2606:4300:0:4::100e
+lgmami	IN	AAAA	2800:810:557:8ec5:918e:38ec:6ec5:3ace
