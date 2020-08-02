@@ -2,6 +2,12 @@
 #
 # Hay que meter alguna funcion que valida si ya esta dada de alta
 #
+function is_valid_ip_addr6($ip_addr6)
+{
+    return (preg_match("/^([a-z\d](-*[a-z\d])*)(\.([a-z\d](-*[a-z\d])*))*$/i", $ip_addr6) //valid chars check
+            && preg_match("/^.{1,253}$/", $ip_addr6) //overall length check
+            && preg_match("/^[^\.]{1,63}(\.[^\.]{1,63})*$/", $ip_addr6)   ); //length of each label
+}
 function is_valid_domain_name($domain_name)
 {
     return (preg_match("/^([a-z\d](-*[a-z\d])*)(\.([a-z\d](-*[a-z\d])*))*$/i", $domain_name) //valid chars check
@@ -40,6 +46,10 @@ date_default_timezone_set('UTC');
 #
 $hoy = date("YmdH"); 
 $ip_del_host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+if (! filter_var($ip_del_host, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+    echo("$ip_del_host is not a valid IPv6 address");
+	exit;
+}
 $porciones = explode(":", $ip_del_host);
 $file="brin.pc2linux.com.zone";
 $data=file_get_contents($file);
@@ -51,6 +61,4 @@ print_r($data);
 $registro = $hoy."\t".$key."\tIN\tAAAA\t".$ip_del_host."\n";
 $tempfile = 'brin.pc2linux.com.zone.temp';
 file_put_contents($tempfile, $registro, FILE_APPEND | LOCK_EX);
-echo "DNS entry ".$key.".brin.pc2linux.com IPv6 to ".$ip_del_host." will be available in one hour"
-?>
-
+ec
