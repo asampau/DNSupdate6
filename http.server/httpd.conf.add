@@ -16,7 +16,7 @@ NameVirtualHost *:80
 #
 <VirtualHost *:80>
     ServerAdmin webmaster@dummy-host.example.com
-    DocumentRoot /var/www/html/AddHost2Domain
+    DocumentRoot /var/www/html/AddHost2Domain.brin.pc2linux.com
     ServerName AddHost2Domain.brin.pc2linux.com
     ErrorLog logs/AddHost2Domain.brin.pc2linux.com.com-error_log
     CustomLog logs/AddHost2Domain.brin.pc2linux.com.com-access_log common
