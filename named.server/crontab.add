@@ -1,4 +1,4 @@
 #
-# Actualizacion de DNS IPv6 dinaminco 20200721
+# Actualizacion de DNS IPv6 dinaminco 20200721 - dominio brin.pc2linux.com
 #
-46 * * * * /root/Scripts/Add-DNS-AAAA.sh
+46 * * * * /root/Scripts/Add-DNS-AAAA-brin.pc2linux.com.sh
