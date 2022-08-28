@@ -1,0 +1,37 @@
+#! /bin/bash
+### BEGIN INIT INFO
+# Provides:          addhost2dns
+# Required-Start:    $local_fs $network
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: addhost2dns service
+# Description:       Run addhost2dns service
+### END INIT INFO
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Running addhost2dns..."
+    curl -s http://addhost2domain.tektonic.pc2linux.com?`hostname`
+    ;;
+  stop)
+    echo "Stopping addhost2dns..."
+    sleep 2
+    ;;
+  status)
+    echo "Checking status..."
+    host $(hostname).tektonic.pc2linux.com
+    MyIPv6Addr=$(curl -s http://addhost2domain.tektonic.pc2linux.com/WhoIsMyIPv6.php)
+    echo "But this host has IPv6 address: "$MyIPv6Addr
+    echo "-----"
+    if [ $(host $(hostname).tektonic.pc2linux.com | grep $MyIPv6Addr | wc -l ) -gt 0 ]; then echo "host exists, no need to addhost2dns";
+	else echo "Current IPv6 address not found in host, addhost2dns needed"; echo "May need flosh DNS cache use: $ sudo systemd-resolve --flush-caches"; exit 1
+	fi
+    echo "-----"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/addhost2dns {start|stop|status}"
+    exit 1
+    ;;
+esac
+exit 0
