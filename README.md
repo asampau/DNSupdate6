@@ -1,7 +1,7 @@
 # DNSupdate6
 Dynamic DNS Update from IPv6 addresses
 
-
+Example domain: tektonic.pc2linux.com
 Usage example: wget -O /tmp/addhost2domain.out http://addhost2domain.tektonic.pc2linux.com?`hostname`
 
 DNS entry Host190-nagios.tektonic.pc2linux.com IPv6 to 2800:810:487:870e:a00:27ff:fe7a:cc1a will be available in one hour
